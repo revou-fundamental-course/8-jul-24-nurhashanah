@@ -29,8 +29,9 @@
             <form class="form">
                 <div>
                     <div class="input-title">Jenis Kelamin</div>
-                    <input type="radio" id="sex-selection-man" name="sex" value="pria"><Label for="selection-man">Pria</Label>
+                    <div class="inputan"><input type="radio" id="sex-selection-man" name="sex" value="pria"><Label for="selection-man">Pria</Label>
                     <input type="radio" id="sex-selection-woman" name="sex" value="wanita"><Label for="selection-woman">Wanita</Label>
+                </div>
                 </div>
                 <div class="input-title">
                     <label for="input-berat-badan">Berat Badan (Kg)</label>
@@ -50,6 +51,7 @@
                     <div class="inputan">
                     <input type="number" id="input-tinggi-badan" class="inputan">
                 </div>
+                <br>
                 <div>
                     <button class="button submit">Hitung BMI</button>
                     <button class="button reset">Reset</button>
@@ -90,9 +92,12 @@
 
             <!-- Hasil Konten -->
              <section class="output-bmi">
-                <p>Berat Badan Lebih</p>
-                <p>24.7</p>
-                <p>Anda memiliki berat badan berlebih</p>
+                <div class="hasil-bmi">Berat Badan Lebih </div>
+                <br>
+                <div class="angka-bmi">24.7</div>
+                <br>
+                <div class="ket-bmi">Anda memiliki berat badan berlebih</div>
+                <br>
                 <button class="button-right">Download Hasil BMI</button>
              </section>
 
@@ -102,7 +107,7 @@
                 <p>
                     Anda berada dalam kategori overwright atau berat badan berlebih.
                 <br>
-                    Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsidan berolahraga.
+                    Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.
                 <br>
                     Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.
                 </p>
@@ -121,7 +126,7 @@
             </article>
 
             <section class="info-penyakit">
-                <h4>Beberapa Penyakit yang berasal dari kegemukan</h4>
+                <p class="info-penyakit">Beberapa Penyakit yang berasal dari kegemukan</p>
                 Diabetes
                 <br>
                 Hipertensi
@@ -132,10 +137,10 @@
                 <button class="button-right">Konsultasi Dokter Via Aplikasi</button>
                 <button class="button-right">Registrasi Online Sekarang</button>
             </section>
-            <p>Download Aplikasi</p>
+            <section class="footer"><p>Download Aplikasi</p>
     <img id="google" src="assets/img/google.png" class="imgfooter"> <img id="appstore" src="assets/img/apple.png" class="imgfooter">
-         </article>
-         
+            </section>         
+        </article> 
         </section>
     </main>
 </body>
