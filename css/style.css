@@ -86,7 +86,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     background-color: azure ;
     text-align: center;
 }
-.hasil-bmi{
+.judul-hasil{
     font-size: larger;
     font-weight: 300;
     font-family: sans-serif;
@@ -96,7 +96,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     font-weight: 500;
     font-family: sans-serif;
 }
-.ket-bmi{
+.artikel-penjelasan{
     font-size: 13px;
     font-weight: 100;
     font-family: sans-serif;

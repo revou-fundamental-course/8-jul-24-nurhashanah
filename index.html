@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Kalkulator BMI</title>
         <link rel="stylesheet" href="css/style.css">
-        <script src="/js/scripts.js"></script>
+        <script src="js/scripts.js"></script>
     </head>
 
 <body>
@@ -23,35 +23,36 @@
         </article>
         <!-- Form Article -->
         <section>
-            <form class="form">
+            <form class="form" id="bmiform">
                 <div>
                     <div class="input-title">Jenis Kelamin</div>
-                    <div class="inputan"><input type="radio" id="sex-selection-man" name="sex" value="pria"><Label for="selection-man">Pria</Label>
-                    <input type="radio" id="sex-selection-woman" name="sex" value="wanita"><Label for="selection-woman">Wanita</Label>
+                    <div class="inputan">
+                    <input type="radio" id="pria" name="gender" required><label for="pria">Pria</label>
+                    <input type="radio" id="wanita" name="gender"  required><label for="wanita">Wanita</label>
                 </div>
                 </div>
                 <div class="input-title">
                     <label for="input-berat-badan">Berat Badan (Kg)</label>
                 </div>
                 <div class="inputan">
-                    <input type="number" id="input-berat-badan" class="inputan">
+                    <input type="number" id="input-berat-badan" class="inputan" required>
                 </div>
                 <div class="input-title">
                     <label for="input-usia">Usia (Tahun)</label>
                 </div>    
                     <div class="inputan">
-                    <input type="number" id="input-usia" class="inputan">
+                    <input type="number" id="input-usia" class="inputan" required>
                 </div>
                 <div class="input-title">
                     <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
                 </div>
                     <div class="inputan">
-                    <input type="number" id="input-tinggi-badan" class="inputan">
+                    <input type="number" id="input-tinggi-badan" class="inputan" required>
                 </div>
                 <br>
                 <div>
-                    <button class="button submit">Hitung BMI</button>
-                    <button class="button reset">Reset</button>
+                    <button type="submit" class="button submit" id="submit">Hitung BMI</button>
+                    <button type="reset" class="button reset" id="reset-button">Reset</button>
                 </div>
             </form>
 
@@ -83,26 +84,55 @@
      <section class="main-content">
         <!-- Result Article -->
          <article>
-            <header>
-                <p style="font-size: large;">Hasil</p>
-            </header>
-
-            <!-- Hasil Konten -->
-             <section class="output-bmi">
-                <div class="hasil-bmi">Berat Badan Lebih </div>
+            <!-- Hasil Konten Kekurangan Berat Badan-->
+             <section id="hasil" class="output-bmi">
+                <div><p class="judul-hasil" id = "judul-hasil">Hasil</p></div>
                 <br>
-                <div class="angka-bmi">24.7</div>
+                <!-- bmivalue -->
+                <div><p class="angka-bmi" id="hasil-bmi">0.0</p></div> 
+                <!-- bmicategory -->
+                <div><p class="ket-bmi" id="kategori-bmi"></p></div>
                 <br>
-                <div class="ket-bmi">Anda memiliki berat badan berlebih</div>
+                <div>
+                    <button class="button-right">Download Hasil BMI</button>
+                </div>
                 <br>
-                <button class="button-right">Download Hasil BMI</button>
              </section>
-
-            <!-- Hasil Artikel -->
-            <article>
-                <p>Hasil BMI diantara 23 dan 25</p>
+             <!-- Hasil Artikel Berat Badan Kurang-->
+             <article id="artikel-penjelasan-kurang" class="artikel-penjelasan" style="display:none;">
+                <p>Hasil BMI kurang dari 18.5</p>
                 <p>
-                    Anda berada dalam kategori overwright atau berat badan berlebih.
+                    Anda berada dalam kategori kekurangan berat badan.
+                <br>
+                    Cara terbaik untuk menaikan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.
+                <br>
+                    Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk meenaikan berat badan hingga batas normal.
+                </p>
+            </article>
+
+             <!-- Hasil Artikel Berat Badan Normal-->
+             <article id="artikel-penjelasan-normal" class="artikel-penjelasan" style="display:none;">
+                <p>Hasil BMI diantara 18.5 sampai dengan 24.9</p>
+                <p>
+                    Anda berada dalam kategori normal (ideal).
+                </p>
+            </article>
+             <!-- Hasil Artikel Berat Badan Lebih-->
+            <article id="artikel-penjelasan-lebih" class="artikel-penjelasan" style="display:none;">
+                <p>Hasil BMI diantara 25.0 sampai dengan 29.9</p>
+                <p>
+                    Anda berada dalam kategori overweight atau berat badan berlebih.
+                <br>
+                    Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.
+                <br>
+                    Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.
+                </p>
+            </article>
+            <!-- Hasil Artikel Berat Badan Gemuk-->
+            <article id="artikel-penjelasan-gemuk" class="artikel-penjelasan" style="display:none;">
+                <p>Hasil BMI 30.0 atau lebih</p>
+                <p>
+                    Anda berada dalam kategori Kegemukan (Obesitas).
                 <br>
                     Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalori makanan yang dikonsumsi dan berolahraga.
                 <br>
@@ -141,7 +171,6 @@
         </section>
     </main>
 </body>
-
 <footer>
     
 </footer>
